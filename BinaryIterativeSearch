@@ -1,0 +1,31 @@
+
+
+public class BinaryIterativeSearch {
+
+	public  BinaryIterativeSearch() {}
+	
+	public int search(float [] binItArray, float target) {
+		int low = 0; 
+		int high = binItArray.length-1; 
+		
+		while (high >= low) {
+			int mid = (high+low)/2; 
+			if (binItArray[mid] > target)
+				high=mid; 
+			else if (binItArray[mid] < target)
+				low = mid; 
+			else
+				return mid; 
+				
+		}
+		return -1; 
+		
+	}
+	public String searchName() {
+		return "binary iterative search"; 
+	}
+}
+
+
+		
+
