@@ -1,0 +1,26 @@
+
+public class BinaryRecursiveSearch {
+	
+	public BinaryRecursiveSearch() {}
+	
+	public int search(float [] arr, float target) {
+		return search(arr, target, 0, arr.length-1); 
+	}
+	public int search (float [] arr, float target, int high, int low) {
+		if (low>high)
+			return -1; 
+		int mid = (low+high)/2;
+		
+		if (arr[mid] == target)
+			return mid; 
+		if (arr [mid] > target)
+			return search(arr, target, low, mid-1);
+		if (arr [mid] < target)
+			return search (arr, target,mid+1, high); 
+	}
+	
+	public String searchName() {
+		return "binary recursive search";
+	}
+}
+	
